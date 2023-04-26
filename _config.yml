@@ -1,40 +1,29 @@
-# External plugins
-# See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
-plugins:
-  - jekyll-archives # Sorry, not GitHub pages friendly!
-  - jekyll-sitemap
-  - jekyll-paginate-v2
+domain: super_simples.github.io
+url: https://super_simples.github.io
 
-exclude:
-  - "/vendor/"
-
-# Site settings
 title: "Super Simples Advogados"
 subtitle: "Seja optante pelo Simples Nacional, é mais vantajoso e menos oneroso."
-email: contato@integracaocascavel.com.br
-name: Bruno Pellizzetti
-description: >
-  A simple yet classy theme for your Jekyll website or blog.
-# Base URL of site (i.e. /blog). It should always start with a slash,
-# and never end with a slash. Set it to a blank value if hosting at the
-# root of your server.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+description: A simple yet classy theme for your Jekyll website or blog.
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
-# Build settings
-markdown: kramdown
-inter_post_navigation: false
-highlightjs_theme: "monokai-sublime"
+name: Bruno Pellizzetti
+email: contato@integracaocascavel.com.br
 
-# Pagination Settings
-# https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
+markdown: kramdown
 pagination:
   enabled: true
   per_page: 5
   permalink: "/page/:num/"
   sort_reverse: true
+
+plugins:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+
+inter_post_navigation: false
+highlightjs_theme: "monokai-sublime"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
