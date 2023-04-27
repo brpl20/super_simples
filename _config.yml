@@ -1,4 +1,5 @@
-domain: super_simples.github.io
+language: pt
+domain: supersimplesadvogados.com.br
 url: https://super_simples.github.io
 
 title: "Super Simples Advogados"
@@ -15,7 +16,7 @@ paginate: 5
 paginate_path: "/posts/page:num/"
 
 plugins:
-  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
 
