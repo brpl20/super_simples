@@ -1,14 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.6.3'
-
 # gem "jekyll", "~> 3.7.3"
 
 group :jekyll_plugins do
+  gem 'github-pages'
   gem 'jekyll-archives'
   gem 'jekyll-feed', '~> 0.12'
-  gem 'github-pages'
-  gem 'jekyll-paginate-v2'
+  gem 'jekyll-paginate', '~> 1.1.0'
   gem 'jekyll-sitemap'
 end
 

@@ -1,4 +1,5 @@
 ---
+permalink: /multa_declaracao
 layout: post
 title:  "Multas por falta de declaração"
 ---

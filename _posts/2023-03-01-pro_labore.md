@@ -1,4 +1,5 @@
 ---
+permalink: /pro_labore
 layout: post
 title:  "Sou empresário, sou obrigado a retirada de pro-labore?"
 ---

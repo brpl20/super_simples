@@ -1,4 +1,5 @@
 ---
+permalink: /nota_fiscal_sucumbencia
 layout: post
 title:  "Honorário de Sucumbência: para quem emitir a nota fiscal e como tributar?"
 ---

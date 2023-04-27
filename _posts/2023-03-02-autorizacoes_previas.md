@@ -1,4 +1,5 @@
 ---
+permalink: /autorizacao_previa
 layout: post
 title:  "Atividade de Advocacia não precisará de autorizações prévias para funcionar"
 ---

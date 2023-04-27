@@ -1,4 +1,5 @@
 ---
+permalink: /inss_autonomo
 layout: post
 title:  "INSS para os Autônomos e os Profissionais Liberais"
 ---

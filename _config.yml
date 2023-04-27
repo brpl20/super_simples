@@ -11,16 +11,13 @@ name: Bruno Pellizzetti
 email: contato@integracaocascavel.com.br
 
 markdown: kramdown
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: "/page/:num/"
-  sort_reverse: true
+paginate: 5
+paginate_path: "/posts/page:num/"
 
 plugins:
   - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-paginate-v2
 
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
