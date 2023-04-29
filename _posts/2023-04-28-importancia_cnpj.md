@@ -3,8 +3,7 @@ permalink: /importancia_do_cnpj_simples_para_advogados
 layout: post
 title:  "A importância de abertura de CNPJ no simples para advogados"
 ---
-<meta name="description" content="Com este texto, você pode aprender sobre a importância da abertura do CNPJ para advogados do ponto de vista tributário, entender as diferenças entre tributação na pessoa física e na pessoa jurídica, além de receber dicas práticas para organizar suas finanças, evitar dívidas e confusão patrimonial. Não se esqueça da importância de estar em dia com as obrigações previdenciárias e de ter uma consciência financeira para o sucesso do seu escritório de advocacia.
-">
+<meta name="description" content="Com este texto, você pode aprender sobre a importância da abertura do CNPJ para advogados do ponto de vista tributário, entender as diferenças entre tributação na pessoa física e na pessoa jurídica, além de receber dicas práticas para organizar suas finanças, evitar dívidas e confusão patrimonial. Não se esqueça da importância de estar em dia com as obrigações previdenciárias e de ter uma consciência financeira para o sucesso do seu escritório de advocacia.">
 
 # Introdução 
 
