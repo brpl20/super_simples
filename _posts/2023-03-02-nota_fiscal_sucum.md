@@ -59,10 +59,17 @@ Ocorre que existe uma outra incidência para classificar a sua tributação, que
 Bom, depois dessas considerações, ainda resta o questionamento: Como faço para justificar esse ganho de capital na Pessoa Jurídica?.
 Nossa recomendação é emitir um lançamento de ganho de capital na Pessoa Jurídica através de DARF, se for do Simples Nacional o código da DARF será 7104, conforme consulta ao site da <a href="https://sicalc.receita.economia.gov.br/sicalc/principal"> Receita Federal. </a>
 
+## Qual é o valor do Tributo? 
+
+Neste caso o valor será de 18,80% sobre a faixa de tributaçao. Por exemplo na primeira faixa o valor de sucumbencia é tributado em 4,5% e desses recolhe-se 18,80% referente ao Imposto de Renda. 
+
+Assim em uma sucumbencia de R$ 100.000,00 teremos a base de cálculos de 4,5% (R$ 4.500,00) e sobre este valor calcula-se os 18,80% totalizando R$ 846,00. 
+
 ## Comparativo de Tributações dos Honorários de Sucumbência
 
-PF | PJ Emitindo NF | PJ Com Ganho de Capital
-—-> Fazer esse comparativo
+| Aspecto | Pessoa Física | Pessoa Jurídica (Simples Nacional) | PJ com Ganho de Capital |
+|---------|---------------|-----------------------------------|--------------------------|
+| Alíquota IR | 7,5% a 27,5% (progressiva) | 4,5% a 19,5% (varia conforme anexo e faixa de receita) | 18,80% sobre a base de cálculo|
 
 ## Recomendação Final
 
