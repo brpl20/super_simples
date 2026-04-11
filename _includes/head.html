@@ -76,13 +76,28 @@
 		window.tooltips = []
 	</script>
 
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEMDGFQ3RZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Cookie Consent: default denied BEFORE GA4 loads -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('cookie-consent') === 'granted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted'
+        });
+      }
+    } catch(e) {}
+  </script>
 
-  gtag('config', 'G-QEMDGFQ3RZ');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEMDGFQ3RZ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-QEMDGFQ3RZ');
+  </script>
 </head>
