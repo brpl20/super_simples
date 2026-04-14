@@ -34,8 +34,8 @@ layout: default
 	<section class="post-navigation">
 		<span class="prev-post">
 			{% if page.previous.url %}
-				<a href="{{page.previous.url | prepend: site.baseurl}}">
-					<span class="fa-stack fa-lg">
+				<a href="{{page.previous.url | prepend: site.baseurl}}" aria-label="Post anterior: {{page.previous.title}}">
+					<span class="fa-stack fa-lg" aria-hidden="true">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 					</span>
@@ -45,9 +45,9 @@ layout: default
 		</span>
 		<span class="next-post">
 			{% if page.next.url %}
-				<a href="{{page.next.url | prepend: site.baseurl}}">
+				<a href="{{page.next.url | prepend: site.baseurl}}" aria-label="Proximo post: {{page.next.title}}">
 					<span class="page-number">{{page.next.title}}</span>
-					<span class="fa-stack fa-lg">
+					<span class="fa-stack fa-lg" aria-hidden="true">
 						<i class="fa fa-square fa-stack-2x"></i>
 						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
 					</span>

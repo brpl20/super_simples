@@ -1,5 +1,4 @@
-// Google Fonts
-@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700,300|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
+// Google Fonts - loaded via <link> in head.html for non-blocking render
 
 // Typography
 $base-font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; // $helvetica;
@@ -23,7 +22,7 @@ $base-z-index: 0;
 
 // Colors
 $dark-gray: #333;
-$medium-gray: #999;
+$medium-gray: #767676; // WCAG AA contrast compliant (was #999)
 $light-gray: #ddd;
 $white: #fff;
 // Flat UI Colors. For more, see http://flatuicolors.com/
