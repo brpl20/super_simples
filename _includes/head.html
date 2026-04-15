@@ -85,6 +85,14 @@
     } catch(e) {}
   </script>
 
+  <script>
+    var ahrefs_analytics_script = document.createElement('script');
+    ahrefs_analytics_script.async = true;
+    ahrefs_analytics_script.src = 'https://analytics.ahrefs.com/analytics.js';
+    ahrefs_analytics_script.setAttribute('data-key', 'VuEBaAP1xwTRN1HJjZC2GA');
+    document.getElementsByTagName('head')[0].appendChild(ahrefs_analytics_script);
+  </script>
+
   <!-- Structured Data -->
   {% include json-ld.html %}
 
