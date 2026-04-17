@@ -1,9 +1,12 @@
 ---
-permalink: /honorario_de_sucumbencia
+permalink: /honorario-de-sucumbencia
 layout: post
 title:  "Você sabe o que é Honorário de Sucumbência?"
+redirect_from:
+- /honorario_de_sucumbencia
+categories: [tributario]
 ---
-Assim como qualquer outro profissional liberal que presta serviço, o Advogado é remunerado por meio de honorários pagos por seus clientes e as partes do processo judicial. Existem três possibilidades de cobrar os honorários dos serviços prestados pelos advogados, conforme o art. <a href="https://www.jusbrasil.com.br/topicos/11708237/artigo-22-da-lei-n-8906-de-04-de-julho-de-1994">22</a> da Lei <a href="https://www.jusbrasil.com.br/topicos/11708237/artigo-22-da-lei-n-8906-de-04-de-julho-de-1994">8.906</a>/94
+Assim como qualquer outro profissional liberal que presta serviço, o Advogado é remunerado por meio de honorários pagos por seus clientes e as partes do processo judicial. Existem três possibilidades de cobrar os honorários dos serviços prestados pelos advogados, conforme o art. <[22](https://www.jusbrasil.com.br/topicos/11708237/artigo-22-da-lei-n-8906-de-04-de-julho-de-1994) [da Lei 8.906](https://www.jusbrasil.com.br/topicos/11708237/artigo-22-da-lei-n-8906-de-04-de-julho-de-1994)/94
 
 *Art. 22. A prestação de serviço profissional assegura aos inscritos na OAB o direito aos honorários convencionados, aos fixados por arbitramento judicial e aos de sucumbência.*
 

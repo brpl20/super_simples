@@ -1,10 +1,11 @@
 ---
-permalink: /inss_autonomo
+permalink: /inss-autonomo
 layout: post
 title:  "INSS para os Autônomos e os Profissionais Liberais"
+redirect_from:
+- /inss_autonomo
+categories: [tributario]
 ---
-
-# Qual a forma de recolhimento do INSS para os Autônomos e os Profissionais Liberais?
 
 Pra iniciarmos, vamos esclarecer quem são os contribuintes individuais. Sendo a Pessoa Física que trabalha por conta própria (profissional liberal e autônomo) que podem contribuir para a Previdência Social.
 

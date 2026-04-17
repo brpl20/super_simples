@@ -1,7 +1,10 @@
 ---
-permalink: /autorizacao_previa
+permalink: /autorizacao-previa
 layout: post
 title:  "Atividade de Advocacia não precisará de autorizações prévias para funcionar"
+redirect_from:
+- /autorizacao_previa
+categories: [gestao-de-escritorio]
 ---
 
 Para abrir uma empresa, o empreendedor passa por muitas burocracias, muitas taxas, muitas licenças precisam ser emitidas para constituição completa de uma empresa. Mas aos poucos estes processos cansativos e muitas vezes onerosos começam a tomar um novo caminho.

@@ -6,9 +6,8 @@ date: 2026-05-01
 author: "Bruno Pellizzetti"
 published: true
 permalink: /cessao-precatorio-irdr34-trf4/
+categories: [tributario]
 ---
-
-# Cessão de Precatório Previdenciário: O Que Muda com o IRDR 34 do TRF4
 
 Se você ganhou uma ação contra o INSS e está esperando receber por precatório ou RPV, talvez já tenha ouvido falar em "vender" esse crédito para receber mais rápido. Essa prática, chamada de **cessão de crédito**, era comum no Sul do Brasil — até novembro de 2025, quando o TRF4 decidiu que **créditos previdenciários não podem mais ser cedidos**.
 

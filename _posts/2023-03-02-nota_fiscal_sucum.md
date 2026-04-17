@@ -1,7 +1,10 @@
 ---
-permalink: /nota_fiscal_sucumbencia
+permalink: /nota-fiscal-sucumbencia
 layout: post
 title:  "Honorário de Sucumbência: para quem emitir a nota fiscal e como tributar?"
+redirect_from:
+- /nota_fiscal_sucumbencia
+categories: [tributario]
 ---
 
 Nos honorários de sucumbência a parte vencida em um processo judicial é obrigada a pagar ao advogado vencedor uma porcentagem correspondente geralmente aos benefícios processuais ou ao valor da causa.
@@ -59,11 +62,11 @@ Ocorre que existe uma outra incidência para classificar a sua tributação, que
 Bom, depois dessas considerações, ainda resta o questionamento: Como faço para justificar esse ganho de capital na Pessoa Jurídica?.
 Nossa recomendação é emitir um lançamento de ganho de capital na Pessoa Jurídica através de DARF, se for do Simples Nacional o código da DARF será 7104, conforme consulta ao site da <a href="https://sicalc.receita.economia.gov.br/sicalc/principal"> Receita Federal. </a>
 
-## Qual é o valor do Tributo? 
+## Qual é o valor do Tributo?
 
-Neste caso o valor será de 18,80% sobre a faixa de tributaçao. Por exemplo na primeira faixa o valor de sucumbencia é tributado em 4,5% e desses recolhe-se 18,80% referente ao Imposto de Renda. 
+Neste caso o valor será de 18,80% sobre a faixa de tributaçao. Por exemplo na primeira faixa o valor de sucumbencia é tributado em 4,5% e desses recolhe-se 18,80% referente ao Imposto de Renda.
 
-Assim em uma sucumbencia de R$ 100.000,00 teremos a base de cálculos de 4,5% (R$ 4.500,00) e sobre este valor calcula-se os 18,80% totalizando R$ 846,00. 
+Assim em uma sucumbencia de R$ 100.000,00 teremos a base de cálculos de 4,5% (R$ 4.500,00) e sobre este valor calcula-se os 18,80% totalizando R$ 846,00.
 
 ## Comparativo de Tributações dos Honorários de Sucumbência
 

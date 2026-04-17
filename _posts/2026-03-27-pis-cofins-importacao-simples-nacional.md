@@ -6,9 +6,8 @@ date: 2026-03-27
 author: "Bruno Pellizzetti"
 published: true
 permalink: /pis-cofins-importacao-simples-nacional/
+categories: [tributario]
 ---
-
-# Empresa no Simples Nacional Não Paga PIS/COFINS na Importação? Entenda a Regra de Transição
 
 **Em resumo:** Empresas optantes do Simples Nacional que importam mercadorias podem estar pagando PIS/COFINS-Importação indevidamente. A Justiça tem reconhecido a não incidência, especialmente para contratos firmados sob o antigo Simples (Lei 9.317/96) e para empresas na Zona Franca de Manaus.
 

@@ -6,9 +6,8 @@ date: 2026-04-10
 author: "Bruno Pellizzetti"
 published: true
 permalink: /oab-sp-liminar-irpj-csll-lucro-presumido/
+categories: [tributario]
 ---
-
-# OAB-SP Consegue Liminar que Suspende Aumento de IRPJ e CSLL para Sociedades de Advogados no Lucro Presumido
 
 **Em resumo:** A OAB de São Paulo obteve uma decisão judicial que suspende o aumento de 10% nos percentuais de presunção do IRPJ e da CSLL para sociedades de advogados no lucro presumido. Se o seu escritório fatura acima de R$ 5 milhões por ano e está nesse regime, essa notícia impacta diretamente o seu bolso.
 

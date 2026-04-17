@@ -10,7 +10,7 @@ lang: pt-br
 permalink: /lgpd-estatuto-oab-retencao-dados-advogado/
 image: "/assets/advogado-e-lgpd.jpeg"
 og_image: "/assets/advogado-e-lgpd.jpeg"
-categories: [Privacidade & Vigilância, Gestão de Escritório]
+categories: [privacidade-e-vigilancia, gestao-de-escritorio]
 ---
 
 ![LGPD na advocacia](/assets/advogado-e-lgpd.jpeg)

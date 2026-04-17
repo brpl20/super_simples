@@ -6,9 +6,8 @@ date: 2026-03-26
 author: "Bruno Pellizzetti"
 published: true
 permalink: /prescricao-pedido-administrativo-restituicao-tributaria/
+categories: [tributario]
 ---
-
-# Pediu Restituição ao Fisco e Não Teve Resposta? Cuidado Com a Prescrição
 
 **Em resumo:** Se sua empresa pagou imposto a mais e pediu restituição pela via administrativa, você pode estar perdendo o prazo para entrar na Justiça. A Súmula 625 do STJ diz que o pedido administrativo não interrompe a prescrição — mas vários tribunais reconhecem que ele **suspende** o prazo. Entenda a diferença e saiba como se proteger.
 

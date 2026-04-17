@@ -21,6 +21,7 @@ plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
 
 inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
@@ -29,11 +30,9 @@ highlightjs_theme: "monokai-sublime"
 jekyll-archives:
   enabled:
     - categories
-    - tags
   layout: 'archive'
   permalinks:
     category: '/category/:name/'
-    tag: '/tag/:name/'
 
 # Disqus comments
 # disqus_shortname: bencentra

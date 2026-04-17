@@ -1,7 +1,10 @@
 ---
-permalink: /pro_labore
+permalink: /pro-labore
 layout: post
 title:  "Sou empresário, sou obrigado a retirada de pro-labore?"
+redirect_from:
+- /pro_labore
+categories: [gestao-de-escritorio]
 ---
 
 Vamos estudar a tradicional obrigatoriedade da contribuição mínima de um salário mínimo de pro-labore do sócio administrador das sociedades limitadas, que é uma informação bem disseminada no mundo contábil e jurídico.

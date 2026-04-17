@@ -2,10 +2,9 @@
 permalink: /guia-imposto-de-renda-autonomos-dicas-e-tributacao
 layout: post
 title:  "Guia Imposto de Renda Autônomos - Dicas e Tributação"
+categories: [tributario]
+description: "Aprenda tudo sobre Imposto de Renda para Autônomos! Declaração, Tributação e Obrigações Fiscais explicadas de forma simples e prática."
 ---
-<meta name="description" content="Aprenda tudo sobre Imposto de Renda para Autônomos! Declaração, Tributação e Obrigações Fiscais explicadas de forma simples e prática. 📊🧾">
-
-# Guia Imposto de Renda Autônomos
 
 Aprender sobre o **Imposto de Renda (IR)** é essencial para todos os profissionais autônomos. Neste guia completo, você encontrará informações detalhadas sobre a declaração de imposto de renda para **profissionais autônomos**, entenderá a tributação específica para essa categoria e descobrirá as obrigações fiscais que precisam ser cumpridas.
 

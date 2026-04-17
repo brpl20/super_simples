@@ -6,9 +6,8 @@ date: 2026-05-08
 author: "Bruno Pellizzetti"
 published: true
 permalink: /correcao-monetaria-precatorios-2026/
+categories: [tributario]
 ---
-
-# Nova Correção Monetária de Precatórios em 2026: IPCA, Selic e o Que Você Precisa Saber
 
 Se você é credor de precatório ou atende clientes que aguardam o pagamento de dívidas judiciais contra o governo, preste atenção: as regras de correção monetária mudaram. A **Emenda Constitucional 136/2025**, promulgada em **9 de setembro de 2025**, trouxe um novo regime de atualização que afeta diretamente quanto você vai receber — e quando.
 

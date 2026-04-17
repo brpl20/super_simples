@@ -6,9 +6,8 @@ date: 2026-04-17
 author: "Bruno Pellizzetti"
 published: true
 permalink: /honorarios-advocaticios-guia-pratico/
+categories: [gestao-de-escritorio]
 ---
-
-# Honorários Advocatícios: Guia Prático para o Advogado que Quer Cobrar Certo
 
 **Em resumo:** A lei garante ao advogado quatro tipos de honorários — convencionados, arbitrados, sucumbência e assistenciais. Os de sucumbência são seus por direito e ninguém pode tirar. O contrato escrito é sua melhor proteção. Neste guia, explicamos como funciona cada tipo, como cobrar, e o que mudou com a Lei 14.365/2022.
 

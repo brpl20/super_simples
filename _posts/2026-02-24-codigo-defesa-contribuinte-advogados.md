@@ -8,10 +8,8 @@ author: "Bruno Pellizzetti"
 published: true
 lang: pt-br
 permalink: /codigo-defesa-contribuinte-advogados-lc-225-2026/
-categories: [Tributário, Gestão de Escritório]
+categories: [tributario, gestao-de-escritorio]
 ---
-
-# Código de Defesa do Contribuinte: o que muda para advogados com a LC 225/2026
 
 **Em resumo:** Em janeiro de 2026, entrou em vigor a Lei Complementar nº 225 — o chamado Código de Defesa do Contribuinte. A lei garante novos direitos na relação com o Fisco, cria programas de conformidade com benefícios reais (incluindo desconto em impostos) e define regras duras para quem é classificado como "devedor contumaz". Se você tem escritório, precisa entender o que mudou.
 

@@ -6,9 +6,8 @@ date: 2026-03-20
 author: "Bruno Pellizzetti"
 published: true
 permalink: /credito-simples-homologacao-prescricao/
+categories: [tributario]
 ---
-
-# Crédito do Simples Nacional: Quando o Governo Perde o Prazo de Cobrar
 
 **Em resumo:** A Receita Federal tem prazos rígidos para cobrar tributos do Simples Nacional. Se ultrapassar esses prazos, a dívida prescreve e você não precisa mais pagar. Entender como funciona o lançamento por homologação pode livrar sua empresa de cobranças indevidas.
 

@@ -6,9 +6,8 @@ date: 2026-04-03
 author: "Bruno Pellizzetti"
 published: true
 permalink: /retencao-11-ilegal-simples-nacional/
+categories: [tributario]
 ---
-
-# Retenção de 11% sobre Nota Fiscal é Ilegal para Empresas do Simples Nacional
 
 **Em resumo:** Se sua empresa é optante do Simples Nacional e estão retendo 11% de contribuição previdenciária sobre suas notas fiscais, isso provavelmente é ilegal. A Justiça já consolidou esse entendimento e você pode ter direito a receber de volta o que pagou a mais.
 

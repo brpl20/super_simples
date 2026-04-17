@@ -262,6 +262,7 @@ DEPENDENCIES
   jekyll-archives
   jekyll-feed (~> 0.12)
   jekyll-paginate (~> 1.1.0)
+  jekyll-redirect-from
   jekyll-sitemap
   tzinfo (>= 1, < 3)
   tzinfo-data

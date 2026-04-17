@@ -7,7 +7,6 @@ date: 2025-10-23
 author: "Bruno Pellizzetti"
 published: true
 categories: [tributario, tecnologia]
-tags: [reforma-tributaria, nfs-e-nacional, compliance, legal-tech]
 lang: pt-BR
 permalink: /blog/nfs-e-nacional-2026-transformacao-tributaria
 image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.png
@@ -15,8 +14,6 @@ og_image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.png
 ---
 
 ![A partir de janeiro de 2026, a NFS-e Nacional será obrigatória para todos os municípios brasileiros.]({{ site.baseurl }}/assets/nfs-e-obrigatoria-para-todos-os-municipios.png)
-
-# NFS-e Nacional 2026: O Que Muda na Prática e Como Se Preparar
 
 A partir de janeiro de 2026, todos os municípios brasileiros devem usar apenas a NFS-e Nacional para notas fiscais de serviço. Esta mudança faz parte da reforma tributária e vai simplificar muito a vida de quem presta serviços no país. Sobre as mudanças da reforma tributária, vamos explicar de forma prática o que isso significa e como você pode se preparar.
 
@@ -114,11 +111,8 @@ Se este conteúdo foi útil para você, imagine como pode ajudar outros profissi
 
 ## Sobre o Autor
 
-**Bruno Pellizzetti** é CEO da ProcStudio e ProcStudio IA, advogado previdenciário com mais de 15 anos de experiência no mundo jurídico e especialista em tecnologia e inteligência artificial aplicada ao direito. 
+**Bruno Pellizzetti** é CEO da ProcStudio e ProcStudio IA, advogado previdenciário com mais de 15 anos de experiência no mundo jurídico e especialista em tecnologia e inteligência artificial aplicada ao direito.
 
 Sua experiência única combina profundo conhecimento em direito previdenciário com visão estratégica em tecnologia, posicionando-o como uma das principais vozes na transformação digital do setor jurídico brasileiro. Através da ProcStudio IA, tem desenvolvido ferramentas de inteligência artificial que automatizam processos jurídicos e facilitam o acesso à justiça.
 
 **Conecte-se com o Bruno para discussões sobre o futuro do direito e tecnologia jurídica.**
-
-
-

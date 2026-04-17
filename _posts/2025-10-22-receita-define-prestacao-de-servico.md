@@ -6,11 +6,11 @@ keywords: "Receita Federal honorários, honorários de sucumbência, prestação
 date: 2025-10-22
 author: "Bruno Pellizzetti"
 published: true
-tags: [advocacia, tributação, honorários de sucumbência, Receita Federal, direito tributário, sociedades de advogados]
 lang: pt-BR
 permalink: /blog/receita-federal-honorarios-sucumbencia-prestacao-servicos
 image: /assets/sucumbencia.png
 og_image: /assets/sucumbencia.png
+categories: [tributario]
 ---
 
 ![A Receita Federal definiu que os honorários de sucumbência devem ser tratados como prestação de serviços para fins de tributação no Simples Nacional]({{ site.baseurl }}/assets/sucumbencia.png)

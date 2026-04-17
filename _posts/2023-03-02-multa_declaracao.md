@@ -1,7 +1,10 @@
 ---
-permalink: /multa_declaracao
+permalink: /multa-declaracao
 layout: post
 title:  "Multas por falta de declaração"
+redirect_from:
+- /multa_declaracao
+categories: [tributario]
 ---
 
 Existem inúmeras razões para que advogados façam a abertura de sociedade de

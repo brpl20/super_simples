@@ -20,16 +20,6 @@ layout: default
   {{ content }}
 </article>
 
-{% if site.jekyll-archives %}
-{% if page.tags.size > 0 %}
-<section class="tags">
-  <strong>Tags:</strong> {% for tag in page.tags %}<a href="{{ site.baseurl }}/tag/{{ tag }}">{{ tag }}</a>{% if forloop.last == false %},&nbsp;{% endif %}{% endfor %}
-</section>
-{% endif %}
-{% endif %}
-
-
-
 {% if site.inter_post_navigation == true %}
 	<section class="post-navigation">
 		<span class="prev-post">

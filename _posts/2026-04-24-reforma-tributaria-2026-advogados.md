@@ -6,9 +6,8 @@ date: 2026-04-24
 author: "Bruno Pellizzetti"
 published: true
 permalink: /reforma-tributaria-2026-advogados/
+categories: [tributario]
 ---
-
-# Reforma Tributária 2026 para Advogados: Guia Prático das Mudanças em CBS, IBS, IRPF e Dividendos
 
 **Em resumo:** A partir de 2026, três grandes mudanças afetam diretamente os advogados: o novo imposto sobre consumo (CBS/IBS) com desconto de 30% para advogados, a isenção de IR para quem ganha até R$ 5.000/mês, e a retenção de 10% sobre dividendos acima de R$ 50.000/mês. Neste guia, explicamos tudo de forma prática.
 

@@ -6,11 +6,11 @@ keywords: "Receita Federal honorários parcerias, tributação advocacia COSIT 1
 date: 2025-10-22
 author: "Bruno Pellizzetti"
 published: true
-tags: [tributação, advocacia, Receita Federal, honorários advocatícios, parcerias entre escritórios, direito tributário, sociedades de advogados]
 lang: pt-BR
 permalink: /blog/receita-federal-tributacao-honorarios-parcerias
 image: /assets/sociedades.png
 og_image: /assets/sociedades.png
+categories: [tributario]
 ---
 
 ![A Receita Federal decidiu que, em parcerias entre escritórios de advocacia, cada sociedade deve tributar apenas os honorários que efetivamente lhe couberem.]({{ site.baseurl }}/assets/sociedades.png)

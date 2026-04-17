@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.12'
   gem 'jekyll-paginate', '~> 1.1.0'
   gem 'jekyll-sitemap'
+  gem "jekyll-redirect-from"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
