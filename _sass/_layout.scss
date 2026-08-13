@@ -102,6 +102,16 @@ pre code.hljs {
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em;
+    // E um <button> de verdade (antes era <a href="javascript:void(0)">,
+    // que o Google nao conseguia rastrear). Zera o visual padrao do botao
+    // para manter a aparencia que o <a> tinha.
+    background: none;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    color: inherit;
+    line-height: inherit;
+    cursor: pointer;
     @include media ($tablet) {
       display: none;
     }
