@@ -1,0 +1,79 @@
+name: Build e deploy
+
+# Por que existe este workflow, e nao o build nativo do GitHub Pages:
+#
+# 1. O build legado ("build_type: legacy") so executa plugins da allowlist
+#    oficial. jekyll-archives NAO esta nela, entao era ignorado em silencio e
+#    as paginas /category/:name/ nunca eram geradas - o index.html linkava
+#    para elas e o usuario caia em 404. Aqui roda `bundle exec jekyll build`,
+#    com os plugins do Gemfile.
+#
+# 2. O build legado so roda quando alguem da push. Como o Jekyll usa
+#    `future: false`, post com data futura fica de fora do build - e sem nada
+#    disparando um rebuild no dia da publicacao, ele nunca entrava no ar
+#    sozinho. O `schedule` abaixo resolve isso: reconstroi todo dia de manha,
+#    e cada post sobe na sua data.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 09:00 UTC = 06:00 em Brasilia (America/Sao_Paulo, UTC-3).
+    - cron: '0 9 * * *'
+  # Permite disparar na mao pela aba Actions, sem esperar o cron.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nao cancela um deploy em andamento: melhor deixar terminar.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # github-pages 228 fixa o jekyll em 3.9.3; 3.1 e a versao mais
+          # nova de Ruby com que essa combinacao roda sem alerta.
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - uses: actions/configure-pages@v5
+
+      - name: Build do Jekyll
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Confere que as paginas de categoria foram geradas
+        # Se o jekyll-archives voltar a nao rodar, o build falha aqui em vez
+        # de publicar um site com os mesmos 404 de antes.
+        run: |
+          if [ ! -d _site/category ]; then
+            echo "ERRO: _site/category nao existe - jekyll-archives nao rodou."
+            exit 1
+          fi
+          echo "Paginas de categoria geradas:"
+          find _site/category -name index.html | sed 's|_site||;s|/index.html|/|'
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

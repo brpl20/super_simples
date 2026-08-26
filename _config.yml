@@ -16,6 +16,15 @@ markdown: kramdown
 paginate: 5
 paginate_path: "/posts/page:num/"
 
+# O rebuild diario (.github/workflows/pages.yml) decide o que ja pode ser
+# publicado comparando a data do post com "agora". Sem timezone, esse "agora"
+# e UTC, e um post datado de hoje so entraria as 21h em Brasilia.
+timezone: America/Sao_Paulo
+# Explicito de proposito: e o que faz post com data futura ficar de fora do
+# build ate chegar o dia. E o default do Jekyll, mas aqui o comportamento e
+# intencional, nao acidental.
+future: false
+
 plugins:
   - jekyll-archives
   - jekyll-paginate
