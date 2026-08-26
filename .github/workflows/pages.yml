@@ -52,6 +52,12 @@ jobs:
         run: bundle exec jekyll build --trace
         env:
           JEKYLL_ENV: production
+          # O jekyll-github-metadata (vem no bundle github-pages) descobre o
+          # repo sozinho no builder nativo. Rodando aqui, ele nao tem esse
+          # contexto e o build morre com "No repo name found". As duas linhas
+          # abaixo dao a ele o nome do repo e um token para a API.
+          PAGES_REPO_NWO: ${{ github.repository }}
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Confere que as paginas de categoria foram geradas
         # Se o jekyll-archives voltar a nao rodar, o build falha aqui em vez
