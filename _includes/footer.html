@@ -1,85 +1,48 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <div class="site-navigation">
-
-      <p><strong>Site Map</strong></p>
-      <ul class="pages">
-				{% include nav_links.html %}
+  <div class="container site-footer__grid">
+    <div class="site-footer__about">
+      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}" width="150" height="60" loading="lazy">
+      <p>{{ site.description }}</p>
+      <p class="site-footer__disclaimer">Conteúdo informativo. Não substitui a análise do caso concreto por advogado ou contador.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Navegue</p>
+      <ul>
+        <li><a href="{{ site.baseurl }}/">Início</a></li>
+        <li><a href="{{ site.baseurl }}/posts/">Artigos por tema</a></li>
+        {% include nav_links.html %}
+        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
       </ul>
     </div>
-
-    <!-- <div class="site-contact">
-
-      <p><strong>Siga-nos</strong></p>
-      <ul class="social-media-list">
-         <li>
-          <a href="mailto:{{ site.email }}">
-            <i class="fa fa-envelope-o"></i>
-            <span class="username">{{ site.email }}</span>
-          </a>
-        </li>
-
-        {% for social in site.social %}
-          {% if social.url != "" %}
-          <li>
-            <a href="{{ social.url }}" title="{{ social.desc }}">
-              <i class="fa fa-{{ social.icon }}"></i>
-              <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span>
-            </a>
-          </li>
-          {% endif %}
-        {% endfor %}
-
+    <div>
+      <p class="eyebrow">Ferramentas ProcStudio</p>
+      <ul>
+        <li><a href="{{ site.procstudio.calculadora }}" rel="noopener">Calculadora tributária PF x PJ</a></li>
+        <li><a href="{{ site.procstudio.financeiro }}" rel="noopener">Financeiro do escritório</a></li>
+        <li><a href="{{ site.procstudio.parcerias }}" rel="noopener">Parcerias e rateio de honorários</a></li>
+        <li><a href="{{ site.procstudio.ferramentas }}" rel="noopener">Todas as ferramentas</a></li>
       </ul>
-    </div> -->
+    </div>
   </div>
-
-  <div class="copy">
-    <span><small>&copy; Copyright 2026</small></span>
+  <div class="container site-footer__copy">
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }} · {{ site.name }}</small>
   </div>
-
 </footer>
 
-<!-- Scripts -->
-<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
-<script src="//unpkg.com/popper.js@1"></script>
-<script src="//unpkg.com/tippy.js@5"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-  // Default syntax highlighting
-  hljs.initHighlightingOnLoad();
-
-  // Header
-  var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass("show");
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
-      if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
-      }
-    });
+<script>
+(function () {
+  var btn = document.getElementById('js-nav-toggle');
+  var menu = document.getElementById('js-nav-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    var open = menu.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
   });
-
-	// Enable tooltips via Tippy.js
-	if (Array.isArray(window.tooltips)) {
-		window.tooltips.forEach(function(tooltip) {
-			var selector = tooltip[0];
-			var config = tooltip[1];
-			tippy(selector, config);
-		})
-	}
-});
-
+})();
 </script>
 
 {% if page.custom_js %}
-<!-- Custom page specific js files -->
   {% for js_file in page.custom_js %}
     <script src='/js/{{ js_file }}.js' type="text/javascript"></script>
   {% endfor %}

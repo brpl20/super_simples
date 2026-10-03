@@ -1,28 +1,24 @@
 ---
 layout: page
-title: "Posts"
+title: "Artigos por tema"
+lead: "Todos os artigos do Super Simples, organizados por assunto."
 permalink: /posts/
 main_nav: false
 ---
 
-{% for category in site.categories %}
-  {% capture cat %}{{ category | first }}{% endcapture %}
-  <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
-  {% for desc in site.descriptions %}
-    {% if desc.cat == cat %}
-      <p class="desc"><em>{{ desc.desc }}</em></p>
-    {% endif %}
-  {% endfor %}
-  <ul class="posts-list">
+{% assign cats = site.categories | sort %}
+{% for category in cats %}
+{% assign cat = category | first %}
+<section class="topic-block" id="{{ cat }}">
+  <h2><a href="{{ site.baseurl }}/category/{{ cat }}/">{% include cat-label.html cat=cat %}</a> <span class="topic-block__count">{{ category | last | size }}</span></h2>
+  {% for d in site.descriptions %}{% if d.cat == cat %}<p class="topic-block__desc">{{ d.desc }}</p>{% endif %}{% endfor %}
+  <ul class="post-index">
   {% for post in site.categories[cat] %}
     <li>
-      <strong>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </strong>
-      <span class="post-date">- {{ post.date | date_to_long_string }}</span>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
     </li>
   {% endfor %}
   </ul>
-  {% if forloop.last == false %}<hr>{% endif %}
+</section>
 {% endfor %}
-<br>

@@ -4,8 +4,8 @@ language: pt
 url: https://supersimplesadvogados.com.br
 
 title: "Super Simples Advogados"
-subtitle: "Seja optante pelo Simples Nacional, é mais vantajoso e menos oneroso."
-description: A simple yet classy theme for your Jekyll website or blog.
+subtitle: "Tributação, contabilidade e gestão para quem advoga, escritas por um advogado."
+description: "Simples Nacional, PF x PJ, reforma tributária e gestão financeira do escritório de advocacia, explicados sem juridiquês contábil."
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
@@ -13,7 +13,7 @@ name: Bruno Pellizzetti
 email: contato@integracaocascavel.com.br
 
 markdown: kramdown
-paginate: 5
+paginate: 9
 paginate_path: "/posts/page:num/"
 
 # O rebuild diario (.github/workflows/pages.yml) decide o que ja pode ser
@@ -32,6 +32,16 @@ plugins:
   - jekyll-redirect-from
 
 inter_post_navigation: false
+
+# ProcStudio: links usados no header, na home, no rodape e no CTA dos posts.
+# O utm_source permite medir no GA do ProcStudio o trafego que vem daqui.
+procstudio:
+  url: "https://procstudio.com.br/?utm_source=supersimples&utm_medium=referral"
+  calculadora: "https://procstudio.com.br/tools/calculadora-tributaria?utm_source=supersimples&utm_medium=referral"
+  financeiro: "https://procstudio.com.br/recursos/financeiro?utm_source=supersimples&utm_medium=referral"
+  parcerias: "https://procstudio.com.br/recursos/parcerias?utm_source=supersimples&utm_medium=referral"
+  relatorios: "https://procstudio.com.br/recursos/relatorios?utm_source=supersimples&utm_medium=referral"
+  ferramentas: "https://procstudio.com.br/tools?utm_source=supersimples&utm_medium=referral"
 highlightjs_theme: "monokai-sublime"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
@@ -50,11 +60,21 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
+  - cat: tributario
+    label: "Tributário"
+    desc: "Simples Nacional, IRPF, PIS/Cofins, retenções e a reforma tributária aplicados à advocacia."
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+  - cat: gestao-de-escritorio
+    label: "Gestão de escritório"
+    desc: "Organização financeira e contábil, honorários, sociedade e rotina do escritório."
+
+  - cat: tecnologia
+    label: "Tecnologia"
+    desc: "Ferramentas, automação e obrigações digitais do advogado."
+
+  - cat: privacidade-e-vigilancia
+    label: "Privacidade"
+    desc: "LGPD, sigilo profissional e proteção de dados no escritório."
 
 # Social icons and sharing options
 #

@@ -1,0 +1,3 @@
+{%- assign _label = include.cat | replace: "-", " " | capitalize -%}
+{%- for d in site.descriptions -%}{%- if d.cat == include.cat and d.label -%}{%- assign _label = d.label -%}{%- endif -%}{%- endfor -%}
+{{- _label -}}
