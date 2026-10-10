@@ -51,7 +51,8 @@
   {% endif %}
 
   <!-- Site styles -->
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  {%- comment -%} ?v= muda a cada build: sem isso o cache (4h na Cloudflare/navegador) serve o CSS antigo junto com o HTML novo. {%- endcomment -%}
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?v={{ site.time | date: "%s" }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
