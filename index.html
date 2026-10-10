@@ -5,84 +5,118 @@ pagination:
 ---
 <div class="home">
 
-<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
-  <div class="scrim {% if site.cover %}has-cover{% endif %}">
-    <header class="site-header">
-      <h1 class="title">{{ site.title }}</h1>
-      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
-    </header>
-  </div>
-</div>
-
-<div class="wrapper">
-<ul class="post-list">
-  {% for post in paginator.posts %}
-  <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">Publicado em: {{ post.date | date: "%d/%m/%Y" }}</div>
-      <div class="post-categories">
-      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
-        {% if site.jekyll-archives %}
-        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% else %}
-        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
-        {% endif %}
-      {% endfor %}{% endif %}
+{% if paginator.page == 1 %}
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Para advogados autônomos e sociedades de advocacia</p>
+      <h1 class="hero__title">Pague o imposto certo. <span class="mark">Nem um real a mais.</span></h1>
+      <p class="hero__lead">Simples Nacional, PF x PJ, reforma tributária e a organização financeira e contábil do escritório, explicados por um advogado, com a fonte de cada afirmação.</p>
+      <div class="hero__actions">
+        <a class="btn" href="{{ site.procstudio.calculadora }}" rel="noopener">Simular PF x PJ grátis</a>
+        <a class="btn btn--ghost" href="#artigos">Ler os artigos</a>
       </div>
-    </section>
-  </li>
-  {% if forloop.last == false %}
-  <hr>
-  {% endif %}
-  {% endfor %}
-</ul>
+    </div>
 
-<nav class="pagination" role="navigation">
-	<p>
+    <aside class="ledger" aria-label="Resumo: pessoa física ou sociedade no Simples">
+      <p class="ledger__head"><span>PF</span> ou <span>PJ</span>? Três números para começar</p>
+      <dl>
+        <div class="ledger__row">
+          <dt>Alíquota máxima do IRPF na tabela progressiva</dt>
+          <dd>27,5%</dd>
+        </div>
+        <div class="ledger__row">
+          <dt>Alíquota inicial do Simples Nacional, Anexo IV</dt>
+          <dd>4,5%</dd>
+        </div>
+        <div class="ledger__row">
+          <dt>Fim da transição para CBS e IBS (LC 214/2025)</dt>
+          <dd>2033</dd>
+        </div>
+      </dl>
+      <a class="ledger__link" href="{{ site.procstudio.calculadora }}" rel="noopener">Faça a conta com o seu faturamento na calculadora do ProcStudio <span>→</span></a>
+    </aside>
+  </div>
+</section>
+{% else %}
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow">Arquivo</p>
+    <h1>Artigos, página {{ paginator.page }} de {{ paginator.total_pages }}</h1>
+  </div>
+</section>
+{% endif %}
+
+<div class="container">
+
+  <nav class="topics" aria-label="Temas">
+    <span class="topics__label">Temas</span>
+    {% assign cats = site.categories | sort %}
+    {% for category in cats %}
+      {% assign cat = category | first %}
+      <a class="tag tag--chip" href="{{ site.baseurl }}/category/{{ cat }}/">{% include cat-label.html cat=cat %} <span>{{ category | last | size }}</span></a>
+    {% endfor %}
+  </nav>
+
+  <section id="artigos" class="posts" aria-label="Artigos">
+    {% for post in paginator.posts %}
+      {% if forloop.first and paginator.page == 1 %}
+        <p class="section-label">Mais recente</p>
+        {% include post-card.html post=post featured=true %}
+
+        <section class="ps-band" aria-label="ProcStudio">
+          <div class="ps-band__intro">
+            <p class="eyebrow">Do artigo à rotina do escritório</p>
+            <h2>O que se explica aqui, o ProcStudio põe para funcionar.</h2>
+            <p>Software de gestão para escritórios de advocacia, com ferramentas que tratam honorário, tributo e sociedade como parte do processo.</p>
+          </div>
+          <div class="ps-band__cards">
+            <a class="ps-card" href="{{ site.procstudio.calculadora }}" rel="noopener">
+              <span class="ps-card__kicker">Grátis, sem cadastro</span>
+              <span class="ps-card__title">Calculadora tributária PF x PJ</span>
+              <span class="ps-card__text">Pessoa física contra Simples Nacional Anexo IV, ano a ano de 2026 a 2033, com reforma tributária e IR sobre dividendos.</span>
+              <span class="ps-card__go">Simular agora →</span>
+            </a>
+            <a class="ps-card" href="{{ site.procstudio.financeiro }}" rel="noopener">
+              <span class="ps-card__kicker">Organização financeira</span>
+              <span class="ps-card__title">Financeiro e gestão tributária</span>
+              <span class="ps-card__text">Honorário que vira fatura e parcela sozinho, contas de PF e PJ separadas, rateio entre sócios e previsão de IRPF por ano.</span>
+              <span class="ps-card__go">Ver o financeiro →</span>
+            </a>
+            <a class="ps-card" href="{{ site.procstudio.parcerias }}" rel="noopener">
+              <span class="ps-card__kicker">Contábil, sem retrabalho</span>
+              <span class="ps-card__title">Parcerias e repasses</span>
+              <span class="ps-card__text">Indicação, parceria e sucumbência com split calculado, para cada escritório declarar só a receita que é sua.</span>
+              <span class="ps-card__go">Ver parcerias →</span>
+            </a>
+          </div>
+        </section>
+
+        <p class="section-label">Artigos</p>
+        <div class="grid">
+      {% else %}
+        {% if forloop.first %}<div class="grid">{% endif %}
+        {% include post-card.html post=post %}
+      {% endif %}
+      {% if forloop.last %}</div>{% endif %}
+    {% endfor %}
+  </section>
+
+  {% if paginator.total_pages > 1 %}
+  <nav class="pager" aria-label="Paginação">
     {% if paginator.previous_page %}
-			{% if paginator.page == 2 %}
-			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
-			{% else %}
-			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-			{% endif %}
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-		<span class="page-number">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
-		{% if paginator.next_page %}
-		<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-		{% else %}
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-		{% endif %}
-	</p>
-</nav>
+      <a class="pager__btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">← Mais recentes</a>
+    {% else %}
+      <span class="pager__btn is-disabled">← Mais recentes</span>
+    {% endif %}
+    <span class="pager__count">Página {{ paginator.page }} de {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <a class="pager__btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Mais antigos →</a>
+    {% else %}
+      <span class="pager__btn is-disabled">Mais antigos →</span>
+    {% endif %}
+  </nav>
+  {% endif %}
 
 </div>
 </div>

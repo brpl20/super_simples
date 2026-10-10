@@ -1,0 +1,24 @@
+{% comment %}
+  CTA do ProcStudio no fim dos posts.
+  Uso: {% include procstudio-cta.html variant="calculadora" %}
+  Variantes: calculadora | financeiro | parcerias
+{% endcomment %}
+{% assign v = include.variant | default: "calculadora" %}
+<aside class="ps-cta ps-cta--{{ v }}" aria-label="ProcStudio">
+  <div class="ps-cta__body">
+    <p class="eyebrow">Na prática, com o ProcStudio</p>
+    {% if v == "financeiro" %}
+      <h2 class="ps-cta__title">O financeiro do escritório nascendo do processo, não de uma planilha paralela.</h2>
+      <p>No ProcStudio o honorário configurado vira fatura, parcela e recebimento. Contas de PF e PJ ficam separadas, o rateio entre sócios sai da participação societária e a previsão de IRPF das parcelas é calculada por ano.</p>
+      <a class="btn" href="{{ site.procstudio.financeiro }}" rel="noopener">Ver o financeiro do ProcStudio</a>
+    {% elsif v == "parcerias" %}
+      <h2 class="ps-cta__title">Parceria registrada, repasse calculado, receita no escritório certo.</h2>
+      <p>O ProcStudio formaliza parcerias e indicações conforme o Estatuto da OAB e calcula o split de cada recebimento, para que cada escritório tribute só a parte que é sua.</p>
+      <a class="btn" href="{{ site.procstudio.parcerias }}" rel="noopener">Ver parcerias no ProcStudio</a>
+    {% else %}
+      <h2 class="ps-cta__title">Vale a pena abrir a sociedade? Faça a conta com os seus números.</h2>
+      <p>A calculadora tributária do ProcStudio compara o advogado como pessoa física e a sociedade no Simples Nacional (Anexo IV), ano a ano até 2033, já com a reforma tributária e a tributação de dividendos. Grátis e sem cadastro.</p>
+      <a class="btn" href="{{ site.procstudio.calculadora }}" rel="noopener">Abrir a calculadora PF x PJ</a>
+    {% endif %}
+  </div>
+</aside>

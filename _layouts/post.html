@@ -1,71 +1,65 @@
 ---
 layout: default
 ---
-<div class="post">
+{% assign words = content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+{% if page.procstudio_cta %}
+  {% assign cta = page.procstudio_cta %}
+{% elsif page.url contains "parceria" %}
+  {% assign cta = "parcerias" %}
+{% elsif page.categories contains "tributario" %}
+  {% assign cta = "calculadora" %}
+{% else %}
+  {% assign cta = "financeiro" %}
+{% endif %}
+<article class="post">
 
-<div class="post-header-container {% if page.cover %}has-cover{% endif %}" {% if page.cover %}style="background-image: url({{ page.cover | prepend: site.baseurl }}); margin-top:5em;"{% endif %}>
-  <div class="scrim {% if page.cover %}has-cover{% endif %}">
-    <header class="post-header">
-      <h1 class="title">{{ page.title }}</h1>
-    </header>
+  <header class="post-head">
+    <div class="container container--narrow">
+      <div class="card__meta">
+        {% for cat in page.categories %}<a class="tag" href="{{ site.baseurl }}/category/{{ cat }}/">{% include cat-label.html cat=cat %}</a>{% endfor %}
+      </div>
+      <h1 class="post-head__title">{{ page.title }}</h1>
+      {% if page.description %}<p class="post-head__lead">{{ page.description }}</p>{% endif %}
+      <p class="post-head__byline">
+        Por <a href="{{ site.baseurl }}/sobre/">{% if page.author %}{{ page.author }}{% else %}{{ site.name }}{% endif %}</a>
+        <span aria-hidden="true">·</span>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+        <span aria-hidden="true">·</span>
+        {{ minutes }} min de leitura
+      </p>
+    </div>
+  </header>
+
+  <div class="container container--narrow">
+    {% if page.cover %}<img class="post-cover" src="{{ page.cover | prepend: site.baseurl }}" alt="">{% endif %}
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    {% include procstudio-cta.html variant=cta %}
+
+    <section class="author-box" aria-label="Sobre o autor">
+      <img src="{{ "/assets/foto-bruno.jpeg" | prepend: site.baseurl }}" alt="" width="72" height="72" loading="lazy">
+      <div>
+        <p class="author-box__name">{{ site.name }}</p>
+        <p>Advogado previdenciarista. Escreve sobre tributação, contabilidade e organização do escritório de advocacia, da pessoa física à sociedade. <a href="{{ site.baseurl }}/sobre/">Mais sobre o autor</a>.</p>
+      </div>
+    </section>
+
+    {% assign same = "" | split: "" %}
+    {% for p in site.posts %}
+      {% if p.url != page.url and p.categories.first == page.categories.first %}{% assign same = same | push: p %}{% endif %}
+    {% endfor %}
+    {% if same.size > 0 %}
+    <section class="related" aria-label="Leia também">
+      <p class="section-label">Leia também</p>
+      <div class="grid grid--compact">
+        {% for p in same limit: 2 %}{% include post-card.html post=p %}{% endfor %}
+      </div>
+    </section>
+    {% endif %}
   </div>
-</div>
 
-<div class="wrapper">
-
-{% unless page.cover %} {% include page_divider.html %} {% endunless %}
-
-
-<article class="post-content">
-  {{ content }}
 </article>
-
-{% if site.inter_post_navigation == true %}
-	<section class="post-navigation">
-		<span class="prev-post">
-			{% if page.previous.url %}
-				<a href="{{page.previous.url | prepend: site.baseurl}}" aria-label="Post anterior: {{page.previous.title}}">
-					<span class="fa-stack fa-lg" aria-hidden="true">
-						<i class="fa fa-square fa-stack-2x"></i>
-						<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-					</span>
-					<span class="page-number">{{page.previous.title}}</span>
-				</a>
-			{% endif %}
-		</span>
-		<span class="next-post">
-			{% if page.next.url %}
-				<a href="{{page.next.url | prepend: site.baseurl}}" aria-label="Proximo post: {{page.next.title}}">
-					<span class="page-number">{{page.next.title}}</span>
-					<span class="fa-stack fa-lg" aria-hidden="true">
-						<i class="fa fa-square fa-stack-2x"></i>
-						<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-					</span>
-				</a>
-			{% endif %}
-		</span>
-	</section>
-{% endif %}
-
-{% if site.disqus_shortname %}
-{% unless page.disqus_disabled %}
-<section class="disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus_shortname }}';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-{% endunless %}
-{% endif %}
-
-</div>
-</div>

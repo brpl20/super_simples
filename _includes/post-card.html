@@ -1,0 +1,16 @@
+{% assign p = include.post %}
+{% assign words = p.content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: 200 | plus: 1 %}
+<article class="card{% if include.featured %} card--featured{% endif %}">
+  <div class="card__meta">
+    {% for cat in p.categories limit: 1 %}<a class="tag" href="{{ site.baseurl }}/category/{{ cat }}/">{% include cat-label.html cat=cat %}</a>{% endfor %}
+    <time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%d/%m/%Y" }}</time>
+    <span aria-hidden="true">·</span>
+    <span>{{ minutes }} min de leitura</span>
+  </div>
+  {% if include.featured %}<h2 class="card__title">{% else %}<h3 class="card__title">{% endif %}
+    <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+  {% if include.featured %}</h2>{% else %}</h3>{% endif %}
+  <p class="card__excerpt">{% if p.description %}{{ p.description | strip_html | truncatewords: 40 }}{% else %}{{ p.content | strip_html | truncatewords: 40 }}{% endif %}</p>
+  <a class="card__more" href="{{ p.url | prepend: site.baseurl }}" aria-hidden="true" tabindex="-1">Ler artigo <span>→</span></a>
+</article>

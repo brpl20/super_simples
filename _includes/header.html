@@ -1,18 +1,19 @@
-<header class="navigation" role="banner">
-  <div class="navigation-wrapper">
-    <a href="{{ site.baseurl }}/" class="logo">
-      {% if site.logo %}
-      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
-      {% else %}
-      <span>{{ site.title }}</span>
-      {% endif %}
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="site-nav" role="banner">
+  <div class="container site-nav__inner">
+    <a href="{{ site.baseurl }}/" class="site-nav__logo">
+      <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}" width="150" height="60">
     </a>
-    <button type="button" class="navigation-menu-button" id="js-mobile-menu" aria-label="Abrir menu de navegacao" aria-expanded="false" aria-controls="js-navigation-menu">
-      <i class="fa fa-bars" aria-hidden="true"></i>
+    <button type="button" class="site-nav__toggle" id="js-nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="js-nav-menu">
+      <span></span><span></span><span></span>
     </button>
-    <nav role="navigation">
-      <ul id="js-navigation-menu" class="navigation-menu show">
-				{% include nav_links.html %}
+    <nav class="site-nav__menu" id="js-nav-menu" aria-label="Principal">
+      <ul>
+        <li><a href="{{ site.baseurl }}/#artigos">Artigos</a></li>
+        <li><a href="{{ site.baseurl }}/posts/">Por tema</a></li>
+        {% include nav_links.html %}
+        <li><a href="{{ site.procstudio.calculadora }}" rel="noopener">Calculadora PF x PJ</a></li>
+        <li><a class="btn btn--small" href="{{ site.procstudio.url }}" rel="noopener">Conheça o ProcStudio</a></li>
       </ul>
     </nav>
   </div>
