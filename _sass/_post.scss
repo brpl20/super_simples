@@ -38,11 +38,11 @@
 
 // ---------- CTA ProcStudio ----------
 .ps-cta {
-  margin: 56px 0 32px; padding: 32px; border-radius: calc(var(--radius) + 4px);
+  margin: 56px 0 32px; padding: 32px; border-radius: var(--radius);
   background: var(--ps-dark); color: #c9d2e3;
-  background-image: radial-gradient(circle at 100% 0%, rgba(29, 78, 216, 0.5), transparent 60%);
+  border-top: 4px solid var(--teal);
 }
-.ps-cta .eyebrow { color: var(--mark); }
+.ps-cta .eyebrow { color: var(--teal); }
 .ps-cta__title { color: #fff; font-size: 26px; line-height: 1.2; margin-bottom: 12px; }
 .ps-cta p { font-size: 16px; line-height: 1.6; }
 .ps-cta .btn { margin-top: 8px; }
@@ -53,7 +53,7 @@
 .author-box { display: flex; gap: 18px; align-items: flex-start; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15.5px; color: var(--ink-2); }
 .author-box img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .author-box p { margin: 0; }
-.author-box__name { font-family: var(--font-serif); font-size: 19px; font-weight: 600; color: var(--ink); margin-bottom: 4px !important; }
+.author-box__name { font-family: var(--font-head); font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 4px !important; }
 .related .section-label { margin-top: 40px; }
 .related .card__title { font-size: 19px; }
 
@@ -62,10 +62,10 @@
 .topic-block h2 { font-size: 28px; display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
 .topic-block h2 a { color: var(--ink); text-decoration: none; }
 .topic-block h2 a:hover { color: var(--accent); }
-.topic-block__count { font-family: var(--font-mono); font-size: 13px; color: var(--muted); font-weight: 500; }
+.topic-block__count { font-family: var(--font-head); font-size: 13px; color: var(--muted); font-weight: 500; }
 .topic-block__desc { color: var(--muted); font-size: 16px; }
 .post-content ul.post-index { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--line); }
 .post-index li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); margin: 0; font-size: 16.5px; line-height: 1.45; }
 .post-index a { color: var(--ink); text-decoration: none; font-weight: 500; }
 .post-index a:hover { color: var(--accent); }
-.post-index time { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.post-index time { font-family: var(--font-head); font-size: 12.5px; color: var(--muted); white-space: nowrap; }

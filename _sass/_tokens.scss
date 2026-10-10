@@ -1,29 +1,32 @@
 // Identidade visual do Super Simples.
-// Papel quente + tinta navy (mesma familia do ProcStudio, #1a2332) e o azul
-// da seta do logo como cor de acao. O amarelo e o "marca-texto" de destaque.
+// Branco e cinza frio + tinta navy (mesma familia do ProcStudio, #1a2332) e o
+// azul da seta do logo como cor de acao. Titulos em grotesca (Archivo), texto
+// em Source Sans 3, cantos quase retos: linha institucional, sem papel creme
+// nem serifada de titulo.
 :root {
-  --paper: #f7f4ee;
-  --paper-2: #efeae0;
+  --paper: #ffffff;
+  --paper-2: #f1f4f8;
   --surface: #ffffff;
-  --ink: #14213a;
-  --ink-2: #3b4658;
-  --muted: #5f6878;
-  --line: #dcd5c8;
-  --line-strong: #c7bfb0;
+  --ink: #0b1a30;
+  --ink-2: #33415a;
+  --muted: #5d6779;
+  --line: #e1e6ed;
+  --line-strong: #c4ccd8;
   --accent: #1d4ed8;
   --accent-ink: #1e3a8a;
-  --accent-soft: #e4ebfb;
-  --mark: #f6d365;
-  --ps-dark: #14213a;
-  --ps-dark-2: #1f2f4d;
+  --accent-soft: #e6eefc;
+  --mark: #c9dbff;
+  --teal: #5fd4c0;
+  --ps-dark: #0b1a30;
+  --ps-dark-2: #13253f;
 
-  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
 
-  --radius: 14px;
-  --radius-sm: 8px;
-  --shadow: 0 1px 2px rgba(20, 33, 58, 0.06), 0 8px 24px -12px rgba(20, 33, 58, 0.18);
+  --radius: 6px;
+  --radius-sm: 4px;
+  --shadow: 0 1px 2px rgba(11, 26, 48, 0.08), 0 6px 16px -8px rgba(11, 26, 48, 0.16);
   --container: 1120px;
   --narrow: 720px;
   --gutter: 20px;
