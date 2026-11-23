@@ -38,10 +38,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap"></noscript>
 
-  <!-- Favicon and other icons -->
-  <!-- Note: /assets/icons/ directory is missing. Uncomment these when icons are generated. -->
+  <!-- Favicon: "S" recortado do logo (assets/logo.png) -->
+  <link rel="icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" href="{{ "/assets/favicon-32x32.png" | prepend: site.baseurl }}" sizes="32x32">
   <meta name="theme-color" content="#14213a">
 
+  {%- assign share_image = page.cover | default: page.og_image | default: page.image -%}
   {% if site.protocols.fb_image %}
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="{{ seo_desc | escape }}" />
@@ -49,10 +51,14 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:title" content="{{ seo_title | escape }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.fb_image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
+  {%- if share_image %}
+  <meta property="og:image" content="{{ share_image | prepend: site.baseurl | prepend: site.url }}" />
+  {%- else %}
+  <meta property="og:image" content="{{ site.protocols.fb_image | prepend: site.baseurl | prepend: site.url }}" />
   <meta property="og:image:type" content="{{ site.protocols.fb_image_type }}" />
   <meta property="og:image:width" content="{{ site.protocols.fb_image_width }}" />
   <meta property="og:image:height" content="{{ site.protocols.fb_image_height }}" />
+  {%- endif %}
   {% endif %}
 
   {% if site.protocols.twitter_image %}
@@ -60,7 +66,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ seo_title | escape }}">
   <meta name="twitter:description" content="{{ seo_desc | escape }}">
-  <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  <meta name="twitter:image" content="{% if share_image %}{{ share_image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}">
   {% endif %}
 

@@ -214,8 +214,8 @@ social:
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
     fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
+    fb_image_width: 300
+    fb_image_height: 113
     fb_image_type: "image/png"
 
     twitter_image: "/assets/logo.png"

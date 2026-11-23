@@ -9,6 +9,8 @@ permalink: /blog/receita-sintonia-classificacao-escritorio-advocacia/
 categories:
 - tributario
 cover: /assets/images/receita-sintonia-classificacao-escritorio-advocacia.jpeg
+cover_width: 1280
+cover_height: 720
 image: /assets/images/receita-sintonia-classificacao-escritorio-advocacia.jpeg
 ---
 

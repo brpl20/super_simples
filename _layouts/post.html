@@ -32,7 +32,7 @@ layout: default
   </header>
 
   <div class="container container--narrow">
-    {% if page.cover %}<img class="post-cover" src="{{ page.cover | prepend: site.baseurl }}" alt="">{% endif %}
+    {% if page.cover %}<img class="post-cover" src="{{ page.cover | prepend: site.baseurl }}" alt=""{% if page.cover_width and page.cover_height %} width="{{ page.cover_width }}" height="{{ page.cover_height }}"{% endif %} decoding="async">{% endif %}
 
     {%- comment -%}
       O titulo do post ja e o unico <h1> da pagina. Posts antigos escritos com
