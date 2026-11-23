@@ -3,8 +3,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {%- comment -%}
+    Titulo e descricao proprios para paginas de categoria (jekyll-archives,
+    cujo page.title e o slug cru) e para a paginacao da home (/posts/pageN/),
+    que antes repetiam "tributario" ou o titulo generico do site.
+  {%- endcomment -%}
+  {%- assign seo_title = page.title | default: site.title -%}
+  {%- assign seo_desc = "" -%}
+  {%- if page.type == "category" -%}
+    {%- capture cat_label -%}{% include cat-label.html cat=page.title %}{%- endcapture -%}
+    {%- assign seo_title = cat_label | strip | append: ": artigos para advogados | " | append: site.title -%}
+    {%- for d in site.descriptions -%}{%- if d.cat == page.title -%}{%- assign seo_desc = d.desc -%}{%- endif -%}{%- endfor -%}
+  {%- elsif paginator and paginator.page > 1 -%}
+    {%- capture seo_title -%}Artigos, página {{ paginator.page }} de {{ paginator.total_pages }} | {{ site.title }}{%- endcapture -%}
+    {%- capture seo_desc -%}Arquivo de artigos, página {{ paginator.page }} de {{ paginator.total_pages }}. {{ site.subtitle }}{%- endcapture -%}
+  {%- endif -%}
+  {%- if seo_desc == "" -%}
+    {%- if page.description -%}{%- assign seo_desc = page.description -%}
+    {%- elsif page.excerpt -%}{%- assign seo_desc = page.excerpt -%}
+    {%- else -%}{%- assign seo_desc = site.description -%}{%- endif -%}
+  {%- endif -%}
+  {%- assign seo_desc = seo_desc | strip_html | strip_newlines | truncate: 160 -%}
+
+  <title>{{ seo_title }}</title>
+  <meta name="description" content="{{ seo_desc | escape }}">
   {% if site.name %}
   <meta name="author" content="{{ site.name }}">
   <meta name="copyright" content="&copy; {{ site.name }} {{ site.time | date: '%Y' }}">
@@ -22,10 +44,10 @@
 
   {% if site.protocols.fb_image %}
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:description" content="{{ seo_desc | escape }}" />
   <meta property="og:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}">
   <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:title" content="{{ seo_title | escape }}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.fb_image | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
   <meta property="og:image:type" content="{{ site.protocols.fb_image_type }}" />
@@ -36,8 +58,8 @@
   {% if site.protocols.twitter_image %}
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:title" content="{{ seo_title | escape }}">
+  <meta name="twitter:description" content="{{ seo_desc | escape }}">
   <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}">
   {% endif %}
