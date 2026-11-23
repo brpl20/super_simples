@@ -92,7 +92,7 @@ Agora, quanto ao entendimento da Receita, se é ou não enquadrável no cálculo
 
 ## O que fazer então?
 
-O que podemos fazer é declarar essa receita como uma [receita tributável](https://supersimplesadvogados.com.br/nota_fiscal_sucumbencia) na nossa pessoa jurídica e pagar os tributos correspondentes a isso de acordo com cada tipo de sociedade.
+O que podemos fazer é declarar essa receita como uma [receita tributável](https://supersimplesadvogados.com.br/nota-fiscal-sucumbencia) na nossa pessoa jurídica e pagar os tributos correspondentes a isso de acordo com cada tipo de sociedade.
 
 Entretanto, essa é uma situação complexa que ainda não foi enfrentada definitivamente pelos tribunais brasileiros e existe um risco em executar essa declaração e enfrentar um processo administrativo na Receita Federal, o que poderá ser discutido judicialmente e só então teremos uma visão definitiva do Judiciário sobre o tema.
 
