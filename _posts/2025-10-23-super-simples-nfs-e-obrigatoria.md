@@ -9,11 +9,11 @@ published: true
 categories: [tributario, tecnologia]
 lang: pt-BR
 permalink: /blog/nfs-e-nacional-2026-transformacao-tributaria
-image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.png
-og_image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.png
+image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.jpg
+og_image: /assets/nfs-e-obrigatoria-para-todos-os-municipios.jpg
 ---
 
-![A partir de janeiro de 2026, a NFS-e Nacional será obrigatória para todos os municípios brasileiros.]({{ site.baseurl }}/assets/nfs-e-obrigatoria-para-todos-os-municipios.png)
+![A partir de janeiro de 2026, a NFS-e Nacional será obrigatória para todos os municípios brasileiros.]({{ site.baseurl }}/assets/nfs-e-obrigatoria-para-todos-os-municipios.jpg){: width="1200" height="673"}
 
 A partir de janeiro de 2026, todos os municípios brasileiros devem usar apenas a NFS-e Nacional para notas fiscais de serviço. Esta mudança faz parte da reforma tributária e vai simplificar muito a vida de quem presta serviços no país. Sobre as mudanças da reforma tributária, vamos explicar de forma prática o que isso significa e como você pode se preparar.
 

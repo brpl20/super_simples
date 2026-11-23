@@ -13,7 +13,7 @@ og_image: "/assets/advogado-e-lgpd.jpeg"
 categories: [privacidade-e-vigilancia, gestao-de-escritorio]
 ---
 
-![LGPD na advocacia](/assets/advogado-e-lgpd.jpeg)
+![LGPD na advocacia](/assets/advogado-e-lgpd.jpeg){: width="1200" height="670"}
 
 ## 1. Base Legal da LGPD para Retenção de Dados
 

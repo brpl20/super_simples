@@ -8,12 +8,12 @@ author: "Bruno Pellizzetti"
 published: true
 lang: pt-BR
 permalink: /blog/receita-federal-honorarios-sucumbencia-prestacao-servicos
-image: /assets/sucumbencia.png
-og_image: /assets/sucumbencia.png
+image: /assets/sucumbencia.jpg
+og_image: /assets/sucumbencia.jpg
 categories: [tributario]
 ---
 
-![A Receita Federal definiu que os honorários de sucumbência devem ser tratados como prestação de serviços para fins de tributação no Simples Nacional]({{ site.baseurl }}/assets/sucumbencia.png)
+![A Receita Federal definiu que os honorários de sucumbência devem ser tratados como prestação de serviços para fins de tributação no Simples Nacional]({{ site.baseurl }}/assets/sucumbencia.jpg){: width="1200" height="673"}
 
 Figura totalmente atípica no Direito brasileiro é o famigerado Honorário de Sucumbência do qual ninguém quer pagar.
 
