@@ -8,12 +8,12 @@ author: "Bruno Pellizzetti"
 published: true
 lang: pt-BR
 permalink: /blog/receita-federal-tributacao-honorarios-parcerias
-image: /assets/sociedades.png
-og_image: /assets/sociedades.png
+image: /assets/sociedades.jpg
+og_image: /assets/sociedades.jpg
 categories: [tributario]
 ---
 
-![A Receita Federal decidiu que, em parcerias entre escritórios de advocacia, cada sociedade deve tributar apenas os honorários que efetivamente lhe couberem.]({{ site.baseurl }}/assets/sociedades.png)
+![A Receita Federal decidiu que, em parcerias entre escritórios de advocacia, cada sociedade deve tributar apenas os honorários que efetivamente lhe couberem.]({{ site.baseurl }}/assets/sociedades.jpg){: width="1200" height="673"}
 
 No universo jurídico, a colaboração entre escritórios de advocacia é uma prática tão antiga quanto a própria profissão. Seja pela necessidade de expertise em áreas distintas ou pela simples indicação de um colega de confiança, as parcerias são o pão de cada dia para muitos advogados. Contudo, a forma de tributar os honorários resultantes dessas colaborações sempre foi um terreno pantanoso, gerando insegurança e, por vezes, distorções.
 

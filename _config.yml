@@ -2,6 +2,11 @@ locale: pt_BR
 language: pt
 
 url: https://supersimplesadvogados.com.br
+# Dominio proprio na raiz: baseurl vazio e explicito. Sem isto, o
+# jekyll-github-metadata pode "adivinhar" /pages/<dono>/<repo> quando o build
+# roda sem token, e os redirects do jekyll-redirect-from (aliases com _)
+# apontariam para um caminho inexistente.
+baseurl: ""
 
 title: "Super Simples Advogados"
 subtitle: "Tributação, contabilidade e gestão para quem advoga, escritas por um advogado."
@@ -209,8 +214,8 @@ social:
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
     fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
+    fb_image_width: 300
+    fb_image_height: 113
     fb_image_type: "image/png"
 
     twitter_image: "/assets/logo.png"

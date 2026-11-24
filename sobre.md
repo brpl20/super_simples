@@ -5,7 +5,7 @@ permalink: /sobre/
 main_nav: true
 ---
 
-![Bruno Pellizzetti]({{ site.baseurl }}/assets/foto-bruno.jpeg){:.profile}
+![Bruno Pellizzetti]({{ site.baseurl }}/assets/foto-bruno.jpeg){:.profile width="640" height="640"}
 
 Meu nome é <strong>Bruno Pellizzetti</strong>, advogado previdenciarista e com alguns contatos com direito tributário. Gosto muito das rotinas de organização e planejamento do escritório de advocacia, minha missão com esse blog é desmistificar aspectos tributários e contábeis que envolvem nossa atividade de advogado autônomo e envolvem a transição da pessoa física para a pessoa jurídica de uma sociedade de advocacia.
 

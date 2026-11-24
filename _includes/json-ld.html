@@ -1,29 +1,108 @@
+{%- comment -%}
+  Dados estruturados. Valores de texto passam por `jsonify`, que gera strings
+  JSON validas (aspas, barras e acentos) em vez de entidades HTML (&quot;).
+
+  Autor: Person com os dados de biografia ja publicados no site (nome em
+  site.name / page.author, foto e pagina /sobre/). Nao acrescentar aqui
+  credenciais, OAB, premios ou perfis que nao estejam publicados e verificaveis.
+
+  dateModified so aparece se o post tiver `last_modified_at` no front matter,
+  preenchido na mao quando houver revisao real do conteudo.
+{%- endcomment -%}
+{%- assign org_id = site.url | append: "/#organization" -%}
+{%- assign person_id = site.url | append: "/sobre/#bruno" -%}
+{%- assign author_name = page.author | default: site.name -%}
+{%- capture org_json -%}
+  {
+    "@type": "Organization",
+    "@id": {{ org_id | jsonify }},
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | append: "/" | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.logo | prepend: site.baseurl | prepend: site.url | jsonify }},
+      "width": 300,
+      "height": 113
+    }
+  }
+{%- endcapture -%}
+{%- capture person_json -%}
+  {
+    "@type": "Person",
+    "@id": {{ person_id | jsonify }},
+    "name": {{ site.name | jsonify }},
+    "url": {{ "/sobre/" | prepend: site.baseurl | prepend: site.url | jsonify }},
+    "image": {{ "/assets/foto-bruno.jpeg" | prepend: site.baseurl | prepend: site.url | jsonify }},
+    "jobTitle": "Advogado"
+  }
+{%- endcapture -%}
 {% if page.layout == 'post' %}
+{%- assign canonical = page.url | replace: 'index.html', '' | prepend: site.baseurl | prepend: site.url -%}
+{%- if page.description -%}
+  {%- assign ld_desc = page.description | strip_html | strip_newlines | truncate: 300 -%}
+{%- else -%}
+  {%- assign ld_desc = page.excerpt | strip_html | strip_newlines | strip | truncate: 300 -%}
+{%- endif -%}
+{%- assign ld_image = page.image | default: page.cover -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "{{ page.title | escape }}",
-  "description": "{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | escape }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Organization",
-    "name": "{{ site.title }}"
+  "headline": {{ page.title | strip_html | jsonify }},
+  {%- if ld_desc != "" %}
+  "description": {{ ld_desc | jsonify }},
+  {%- endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ canonical | jsonify }}
   },
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ site.title }}"
-  }
+  "url": {{ canonical | jsonify }},
+  "inLanguage": "pt-BR",
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {%- if page.last_modified_at %}
+  "dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},
+  {%- endif %}
+  {%- if ld_image %}
+  "image": [{{ ld_image | prepend: site.baseurl | prepend: site.url | jsonify }}],
+  {%- endif %}
+  {%- if author_name == site.name %}
+  "author": {{ person_json }},
+  {%- else %}
+  "author": {
+    "@type": "Person",
+    "name": {{ author_name | jsonify }}
+  },
+  {%- endif %}
+  "publisher": {{ org_json }}
+}
+</script>
+{% elsif page.url == '/sobre/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": {{ page.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+  "inLanguage": "pt-BR",
+  "mainEntity": {{ person_json }},
+  "publisher": {{ org_json }}
 }
 </script>
 {% else %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{{ site.title }}",
-  "url": "{{ site.url }}",
-  "description": "{{ site.description | escape }}"
+  "@graph": [
+    {{ org_json }},
+    {
+      "@type": "WebSite",
+      "@id": {{ site.url | append: "/#website" | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "url": {{ site.url | append: "/" | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": {{ org_id | jsonify }} }
+    }
+  ]
 }
 </script>
 {% endif %}

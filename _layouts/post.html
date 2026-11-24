@@ -32,10 +32,20 @@ layout: default
   </header>
 
   <div class="container container--narrow">
-    {% if page.cover %}<img class="post-cover" src="{{ page.cover | prepend: site.baseurl }}" alt="">{% endif %}
+    {% if page.cover %}<img class="post-cover" src="{{ page.cover | prepend: site.baseurl }}" alt=""{% if page.cover_width and page.cover_height %} width="{{ page.cover_width }}" height="{{ page.cover_height }}"{% endif %} decoding="async">{% endif %}
 
+    {%- comment -%}
+      O titulo do post ja e o unico <h1> da pagina. Posts antigos escritos com
+      "# Secao" no Markdown geravam varios <h1>; nesses casos todos os headings
+      do corpo descem um nivel (h1->h2, h2->h3...), preservando a hierarquia
+      relativa. Posts sem <h1> no corpo nao sao tocados.
+    {%- endcomment -%}
+    {%- assign body = content -%}
+    {%- if body contains "<h1" -%}
+      {%- assign body = body | replace: "<h5", "<h6" | replace: "</h5>", "</h6>" | replace: "<h4", "<h5" | replace: "</h4>", "</h5>" | replace: "<h3", "<h4" | replace: "</h3>", "</h4>" | replace: "<h2", "<h3" | replace: "</h2>", "</h3>" | replace: "<h1", "<h2" | replace: "</h1>", "</h2>" -%}
+    {%- endif %}
     <div class="post-content">
-      {{ content }}
+      {{ body }}
     </div>
 
     {% include procstudio-cta.html variant=cta %}
