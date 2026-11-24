@@ -134,7 +134,7 @@
 .pager { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
 .pager__btn { font-weight: 600; text-decoration: none; padding: 10px 16px; border: 1px solid var(--line-strong); border-radius: var(--radius-sm); color: var(--ink); background: var(--surface); font-size: 15px; }
 .pager__btn:hover { border-color: var(--ink); color: var(--ink); }
-.pager__btn.is-disabled { opacity: 0.4; }
+.pager__btn.is-disabled { color: var(--muted); background: var(--paper-2); }
 .pager__count { font-family: var(--font-head); font-size: 13px; color: var(--muted); }
 
 .page-content { padding-bottom: 80px; }
